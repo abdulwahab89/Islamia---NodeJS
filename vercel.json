@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/auth(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/users(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/salah(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/quran(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/hadith(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ]
+}
